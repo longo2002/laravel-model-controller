@@ -21,14 +21,13 @@
         </style>
     </head>
     <body class="antialiased">
-        <!-- @forelse ($movies as $movie)
+        @forelse ($movies as $movie)
             <div>
                 <h3>{{$movie->title}}</h3>
                 <h4>{{$movie->original_title}}</h4>
                 <h4>{{$movie->vote}}</h4>
             </div>
         @empty
-        @endforelse -->
-        test1
+        @endforelse
     </body>
 </html>
