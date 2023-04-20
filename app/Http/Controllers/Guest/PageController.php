@@ -11,12 +11,11 @@ class PageController extends Controller
    {
 
     $movies = Movie::all();
-    dd($movies);
     $data = [
         "movies" => $movies
     ];
 
-    return view("welcome");
+    return view("welcome", $data);
    }
 
    public function contacts()
