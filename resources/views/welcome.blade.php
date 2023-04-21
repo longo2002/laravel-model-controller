@@ -18,14 +18,32 @@
             body {
                 font-family: 'Nunito', sans-serif;
             }
+            
+            ul{
+                list-style:none;
+            }
+
+            .card{
+                display: flex;
+                justify-content:center;
+            }
+
+            .card ul{
+                border: 2px solid black;
+                border-radius: 15px;
+                padding-right: 35px;
+            }
+
         </style>
     </head>
     <body class="antialiased">
         @forelse ($movies as $movie)
-            <div>
-                <h3>{{$movie->title}}</h3>
-                <h4>{{$movie->original_title}}</h4>
-                <h4>{{$movie->vote}}</h4>
+            <div class="card">
+                <ul>
+                <li><h3>{{$movie->title}}</h3></li>
+                <li><h4>{{$movie->original_title}}</h4></li>
+                <li><h4>{{$movie->vote}}</h4></li>
+                </ul>
             </div>
         @empty
         @endforelse
